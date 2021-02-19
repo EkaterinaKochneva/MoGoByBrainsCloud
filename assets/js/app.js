@@ -3,6 +3,7 @@ let intro = document.querySelector('.intro');
 let introH = intro.offsetHeight;
 let scrollOffset = window.scrollY;
 
+// Fixed Header
 checkScroll();
 
 window.addEventListener('scroll', function() {
@@ -21,3 +22,17 @@ function checkScroll() {
     }
 }
 
+// Smooth scroll
+
+let anchors = document.querySelectorAll('.scroll');
+
+for (let anchor of anchors) {
+    anchor.addEventListener("click", function(smoothScroll) {
+        smoothScroll.preventDefault();
+        let elementId = anchor.getAttribute('href')
+        document.querySelector('' + elementId).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}

@@ -111,10 +111,11 @@ hr {
 .header__logo {
     font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Nav */
-.nav{
+.nav {
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -170,6 +171,10 @@ hr {
     top: 22px;
     right: 20px;
     z-index: 1;
+}
+
+.nav-toggle:focus {
+    outline: none;
 }
 
 .nav-toggle__item {
@@ -1271,6 +1276,10 @@ hr {
         left: 0;
         width: 100%;
         background-color: #f38181;
+    }
+
+    .nav.active {
+        display: block;
     }
 
     .nav__link {
